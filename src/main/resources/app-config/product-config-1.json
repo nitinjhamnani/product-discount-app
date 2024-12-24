@@ -1,0 +1,56 @@
+{
+  "name": "product-config-1",
+  "processors": [
+    {
+      "order": 1,
+      "processor": "keyProcessor",
+      "config": [
+        {
+          "key": "category",
+          "value": {
+            "dataType": "STRING"
+          }
+        }
+      ]
+    },
+    { 
+      "order": 2,
+      "processor": "ruleProcessor",
+      "config": [
+        {
+          "key": "Rule 1",
+          "value": {
+            "conditions": [
+              {
+                "condition": "condition1",
+                "productKey": "category",
+                "operation": "EQUALS",
+                "value": "Electronics"
+              }
+            ],
+            "expression": "condition1"
+          }
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "processor": "setProcessor",
+      "config": [
+        {
+          "key": "Set A",
+          "value": {
+            "rules": [
+              {
+                "ruleName": "Rule 1",
+                "discountType": "FLAT",
+                "discountValue": 100
+              }
+            ],
+            "returnType": "MAX_DISCOUNT"
+          }
+        }
+      ]
+    }
+  ]
+}

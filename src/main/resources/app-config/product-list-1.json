@@ -1,0 +1,12 @@
+[
+  {
+    "category": "electronics",
+    "inventory": 30,
+    "arrival": "NEW",
+    "rating": 1.1,
+    "currency": "USD",
+    "price": 2.3,
+    "origin": "Africa",
+    "product": "A123"
+  }
+]
